@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int faktoriyelHesapla(int n);
+
+int main()
+{
+    int n,sonuc;
+    printf("Lutfen faktoriyelini hesaplamak istediginiz tamsayiyi giriniz : \n");
+    scanf("%d",&n);
+    sonuc = faktoriyelHesapla(n);
+    printf("%d! = %d",n,sonuc);
+}
+
+int faktoriyelHesapla(int n)
+{
+    if (n==1)
+    {
+        return 1;
+    }
+    return n * faktoriyelHesapla(n-1);
+}
